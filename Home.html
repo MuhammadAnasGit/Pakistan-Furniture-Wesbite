@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/General.css">
+    <link rel="stylesheet" href="styles/Home-elements.css">
+    <link rel="icon" type="image/jpg" href="Logo/logo.jpg"> 
+</head>
+<body>
+
+  <header class="header">
+    <div class="left">
+      <div>
+        <button class="Home-Link" onclick="window.location.href='Home.html'">
+          <h1 class="Pakistan">
+            <span class="Pakistan" style="color: rgb(10, 85, 10);">Pakistan </span>Furniture
+          </h1>
+        </button>
+      </div>
+    </div>
+    <div class="right">     
+      <div class="dropdown">
+        <button class="button Home-button" onclick="window.location.href='Home.html'">
+          Home
+        </button>
+        <!-- Dropdown content -->
+        <div class="dropdown-content">
+          <button onclick="window.location.href='Bedroom-products.html'" class="a-nill" >Bedroom Sets</button>
+          <button onclick="window.location.href='Sofa-products.html'" class="a-nill" >Sofa Sets</button>
+        </div>
+      </div>      
+      <button class="button" onclick="window.location.href='Order.html'">
+        Order
+      </button> 
+      <button class="button" onclick="window.location.href='About-us.html'">
+        About 
+      </button>
+      <button class="button" onclick="window.location.href='Contact.html'">
+        Contact 
+      </button>     
+    </div>
+  </header>
+  
+  <div class="background-container"></div>
+  <div class="search-container">
+    <input id="searchInput" type="text">
+    <button type="submit" onclick="search()">SEARCH</button>
+  </div>
+
+  <div class="grid-container">
+    <div class="size">
+      <a href="Bedroom-products.html">
+        <img class='gridimg' src="Logo/Bedroom.jpg"> 
+        <div class="text-overlay">
+          <span class="text">Bedroom</span>
+        </div>  
+      </a>
+    </div>
+    <div class="size ">
+      <a href="Sofa-products.html">
+        <img class='gridimg' src="Logo/Sofa.jpg">   
+        <div class="text-overlay">
+          <span class="text">Sofa</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  
+  <div class="loader"></div>
+
+  <script src="script/Home.js"></script>
+  <script src="script/Search.js"></script>
+  
+
+</body>
+</html>

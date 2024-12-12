@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viewing</title>
+<link rel="stylesheet" href="styles/Preview.css">
+<link rel="icon" type="image/jpg" href="Logo/logo.jpg"> 
+</head>
+<body>
+<div class="image-container">
+  <img class="image" src="Bed/3/1.jpg">
+  <div class="prev" onclick="prevImage()">&#10094;</div>
+  <div class="next" onclick="nextImage()">&#10095;</div>
+  <div class="close" onclick="closeViewer()">&#10006;</div>
+</div>
+<script>
+  const images = [
+    "Bed/3/1.jpg",
+    "Bed/3/2.jpg"
+  ]; 
+let currentImageIndex = 0;
+
+function prevImage() {
+    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+    updateImage();
+  }
+
+function nextImage() {
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    updateImage();
+  }
+
+function updateImage() {
+    const imageElement = document.querySelector('.image');
+    imageElement.src = images[currentImageIndex];
+  }
+
+function closeViewer() {
+    window.history.back(); // Go back to the previous page
+}
+
+</script>
+</body>
+</html>

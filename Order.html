@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles/General.css">
+    <link rel="stylesheet" href="styles/Order.css">    
+    <link rel="icon" type="image/jpg" href="Logo/logo.jpg"> 
+</head>
+<body>
+
+  <header class="header">
+    <div class="left">
+      <div>
+        <button class="Home-Link" onclick="window.location.href='Home.html'">
+          <h2 class="Pakistan">
+            <span class="Pakistan" style="color: rgb(10, 85, 10);">Pakistan </span>Furniture
+          </h2>
+        </button>
+      </div>
+    </div>
+    <div class="right">     
+      <div class="dropdown">
+        <button class="button Home-button" onclick="window.location.href='Home.html'">
+          Home
+        </button>
+        <!-- Dropdown content -->
+        <div class="dropdown-content">
+          <button onclick="window.location.href='Bedroom-products.html'" class="a-nill" >Bedroom Sets</button>
+          <button onclick="window.location.href='Sofa-products.html'" class="a-nill" >Sofa Sets</button>
+        </div>
+      </div>      
+      <button class="button" onclick="window.location.href='Order.html'">
+        Order
+      </button> 
+      <button class="button" onclick="window.location.href='About-us.html'">
+        About 
+      </button>
+      <button class="button" onclick="window.location.href='Contact.html'">
+        Contact 
+      </button>     
+    </div>
+  </header>
+
+  <div class="main">
+  <h2 class="order-h2">Place an Order</h2>
+  <form id="order-form" action="/submit-form" method="POST">
+    <div>
+        <label>Name:</label>
+        <input type="text" placeholder="Name" name="name" required>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" placeholder="Email Address" name="email" required>
+    </div>
+    <div>
+        <label>Phone Number:</label>
+        <input type="phone" placeholder="Phone Number" name="phone" required>
+    </div>
+    <div>
+        <label>Product Name:</label>
+        <input type="text" placeholder="Product Name" name="productName" required>
+    </div>
+    <div>
+        <label>Date of Visit:</label>
+        <input type="date" name="date" required>
+    </div>
+    <button class="submit-button" type="submit">Submit</button>
+</form>
+    
+
+    <div class="loader"></div>
+
+    <script src="script/Home.js"></script>
+    <script src="script/Order.js"></script>
+  
+    
+</body>
+</html>
